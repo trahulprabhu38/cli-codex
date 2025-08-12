@@ -65,7 +65,7 @@ function Header({ query, setQuery, inputRef }) {
           <Logo size={38} />
           <span style={{ color: THEME.text, fontSize: 28, fontWeight: 800, letterSpacing: '-1px', lineHeight: 1.1, fontFamily: 'Inter, system-ui, -apple-system, Roboto, Arial' }}>CLI Codex</span>
         </div>
-        <a href="https://github.com/rahulprabhu38/cheatsheet-flashcards" target="_blank" rel="noopener noreferrer" style={{ position: 'absolute', right: 32, top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center' }}>
+        <a href="https://github.com/trahulprabhu38/cli-codex" target="_blank" rel="noopener noreferrer" style={{ position: 'absolute', right: 32, top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center' }}>
           <img src="/public/download.png" alt="GitHub" style={{ height: 38, width: 38, display: 'block', borderRadius: '50%' }} />
         </a>
       </div>
@@ -304,10 +304,46 @@ export default function CheatsheetApp() {
       )}
 
       <Toast message={toast} />
+       
+      {/* <footer style={{ marginTop: 'auto', padding: '22px 0 16px 0', textAlign: 'center', color: THEME.muted, fontSize: 16, fontWeight: 600, letterSpacing: '0.2px' }}>
+        <a href="https://github.com/trahulprabhu38/cli-codex" target="_blank" rel="noopener noreferrer" style={{ position: 'absolute', right: 32, top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center' }}>
+          @trahulprabhu38
+        </a>
+      </footer> */}
+      <footer
+  style={{
+    marginTop: 'auto',
+    padding: '22px 0 16px 0',
+    textAlign: 'center',
+    color: THEME.muted,
+    fontSize: 16,
+    fontWeight: 600,
+    letterSpacing: '0.2px',
+    position: 'relative'
+  }}
+>
+  <span>© 2025 CLI Codex</span>
+  
+  <a
+    href="https://www.linkedin.com/in/trahulprabhu38"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      position: 'absolute',
+      right: 32,
+      top: '50%',
+      transform: 'translateY(-50%)',
+      display: 'flex',
+      alignItems: 'center',
+      color: THEME.muted,
+      textDecoration: 'none',
+      fontWeight: 500
+    }}
+  >
+    @trahulprabhu38
+  </a>
+</footer>
 
-      <footer style={{ marginTop: 'auto', padding: '22px 0 16px 0', textAlign: 'center', color: THEME.muted, fontSize: 16, fontWeight: 600, letterSpacing: '0.2px' }}>
-        ©trahulprabhu38
-      </footer>
     </div>
   )
 }
