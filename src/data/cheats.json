@@ -1,0 +1,319 @@
+[
+  {
+    "id": "git-basics",
+    "title": "Git Basics",
+    "description": "Essential commands for cloning, initializing, staging, committing, and viewing history.",
+    "tags": ["git"],
+    "commands": [
+      {
+        "id": "g1",
+        "label": "Clone a repository",
+        "code": "git clone <repo-url>",
+        "notes": "Downloads the entire repository from the remote source."
+      },
+      {
+        "id": "g2",
+        "label": "Clone a specific branch",
+        "code": "git clone -b <branch> --single-branch <repo-url>",
+        "notes": "Fetch only the specified branch to save time and space."
+      },
+      {
+        "id": "g3",
+        "label": "Initialize a new repository",
+        "code": "git init <directory-name>",
+        "notes": "Start tracking files in the given directory."
+      },
+      {
+        "id": "g4",
+        "label": "Add a file to staging",
+        "code": "git add <file>",
+        "notes": "Stage changes for the next commit."
+      },
+      {
+        "id": "g5",
+        "label": "Add all changes",
+        "code": "git add -A",
+        "notes": "Stage all tracked and untracked files."
+      },
+      {
+        "id": "g6",
+        "label": "Commit with a message",
+        "code": "git commit -m \"<message>\"",
+        "notes": "Save staged changes to history with a message."
+      },
+      {
+        "id": "g7",
+        "label": "Amend last commit (no message change)",
+        "code": "git commit --amend --no-edit",
+        "notes": "Include additional changes in the last commit."
+      },
+      {
+        "id": "g8",
+        "label": "Amend last commit (with message change)",
+        "code": "git commit --amend -m \"<new-message>\"",
+        "notes": "Update both changes and message in the last commit."
+      },
+      {
+        "id": "g9",
+        "label": "View commit history",
+        "code": "git log",
+        "notes": "Display detailed commit history."
+      },
+      {
+        "id": "g10",
+        "label": "View compact commit history",
+        "code": "git log --oneline --graph --decorate --all",
+        "notes": "Compact view of commits with branches."
+      }
+    ]
+  },
+  {
+    "id": "git-history-search",
+    "title": "Git History & Diff",
+    "description": "Search commit history and view differences between versions.",
+    "tags": ["git", "history", "diff", "search", "blame"],
+    "commands": [
+      {
+        "id": "g11",
+        "label": "View commits for a file",
+        "code": "git log -- <file>",
+        "notes": "Show history of changes to a specific file."
+      },
+      {
+        "id": "g12",
+        "label": "Search commit history for string",
+        "code": "git log -S\"<string>\"",
+        "notes": "Find commits that added or removed a specific string."
+      },
+      {
+        "id": "g13",
+        "label": "Show unstaged differences",
+        "code": "git diff",
+        "notes": "Compare working directory with last commit."
+      },
+      {
+        "id": "g14",
+        "label": "Show differences between commits",
+        "code": "git diff <commit1> <commit2>",
+        "notes": "View changes between two commit SHAs."
+      }
+    ]
+  },
+  {
+    "id": "git-reset-revert",
+    "title": "Git Reset, Checkout & Revert",
+    "description": "Discard, reset, and revert changes in Git.",
+    "tags": ["git", "reset", "revert", "checkout"],
+    "commands": [
+      {
+        "id": "g15",
+        "label": "Discard unstaged changes",
+        "code": "git checkout -- <file>",
+        "notes": "Revert file to the last committed version."
+      },
+      {
+        "id": "g16",
+        "label": "Discard all local changes",
+        "code": "git reset --hard",
+        "notes": "Removes all uncommitted changes permanently."
+      },
+      {
+        "id": "g17",
+        "label": "Reset to commit (keep staged)",
+        "code": "git reset --soft <commit>",
+        "notes": "Move HEAD but keep staged changes."
+      },
+      {
+        "id": "g18",
+        "label": "Reset to commit (unstage)",
+        "code": "git reset --mixed <commit>",
+        "notes": "Move HEAD and unstage changes."
+      },
+      {
+        "id": "g19",
+        "label": "Reset to commit (discard changes)",
+        "code": "git reset --hard <commit>",
+        "notes": "Completely discard changes and move HEAD."
+      },
+      {
+        "id": "g20",
+        "label": "Revert a commit",
+        "code": "git revert <commit>",
+        "notes": "Creates a new commit that undoes a specific commit."
+      }
+    ]
+  },
+  {
+    "id": "git-branching-merging",
+    "title": "Branching & Merging",
+    "description": "Work with branches, merge, and rebase.",
+    "tags": ["git", "branch", "merge", "rebase"],
+    "commands": [
+      {
+        "id": "g21",
+        "label": "Create a new branch",
+        "code": "git checkout -b <branch>",
+        "notes": "Create and switch to a new branch."
+      },
+      {
+        "id": "g22",
+        "label": "Switch to existing branch",
+        "code": "git switch <branch>",
+        "notes": "Quickly switch branches."
+      },
+      {
+        "id": "g23",
+        "label": "Delete branch (safe)",
+        "code": "git branch -d <branch>",
+        "notes": "Delete if already merged."
+      },
+      {
+        "id": "g24",
+        "label": "Delete branch (force)",
+        "code": "git branch -D <branch>",
+        "notes": "Force delete regardless of merge status."
+      },
+      {
+        "id": "g25",
+        "label": "Delete remote branch",
+        "code": "git push origin --delete <branch>",
+        "notes": "Remove branch from remote."
+      },
+      {
+        "id": "g26",
+        "label": "Merge branch",
+        "code": "git merge <branch>",
+        "notes": "Merge specified branch into current."
+      },
+      {
+        "id": "g27",
+        "label": "Rebase onto another branch",
+        "code": "git rebase <branch>",
+        "notes": "Reapply commits on top of another branch."
+      },
+      {
+        "id": "g28",
+        "label": "Abort rebase",
+        "code": "git rebase --abort",
+        "notes": "Stop and return to original branch state."
+      },
+      {
+        "id": "g29",
+        "label": "Continue rebase",
+        "code": "git rebase --continue",
+        "notes": "Continue rebase after fixing conflicts."
+      }
+    ]
+  },
+
+  {
+    "id": "k8s-rollout-commands",
+    "title": "Kubernetes: Rollout & Deployment Management",
+    "description": "Core and advanced kubectl rollout commands for managing Kubernetes deployments.",
+    "tags": ["kubernetes", "rollout"],
+    "commands": [
+      {
+        "id": "r1",
+        "label": "Rollback to previous revision",
+        "code": "kubectl rollout undo deployment/<deployment-name>",
+        "notes": "Reverts the deployment to the last applied revision."
+      },
+      {
+        "id": "r2",
+        "label": "Rollback to a specific revision",
+        "code": "kubectl rollout undo deployment/<deployment-name> --to-revision=<revision>",
+        "notes": "Reverts the deployment to a specific revision number."
+      },
+      {
+        "id": "r3",
+        "label": "View rollout history",
+        "code": "kubectl rollout history deployment/<deployment-name>",
+        "notes": "Displays previous revisions with change cause if recorded."
+      },
+      {
+        "id": "r4",
+        "label": "Pause a rollout",
+        "code": "kubectl rollout pause deployment/<deployment-name>",
+        "notes": "Temporarily stops the rollout process without reverting changes."
+      },
+      {
+        "id": "r5",
+        "label": "Resume a paused rollout",
+        "code": "kubectl rollout resume deployment/<deployment-name>",
+        "notes": "Resumes a paused rollout so it can continue to completion."
+      },
+      {
+        "id": "r6",
+        "label": "Check rollout status",
+        "code": "kubectl rollout status deployment/<deployment-name>",
+        "notes": "Displays progress and waits until rollout is complete."
+      },
+      {
+        "id": "r7",
+        "label": "Update image and record cause",
+        "code": "kubectl set image deployment/<deployment-name> <container>=<image>:<tag> --record",
+        "notes": "Updates the container image and records the reason in rollout history."
+      },
+      {
+        "id": "r8",
+        "label": "Describe deployment",
+        "code": "kubectl describe deployment <deployment-name>",
+        "notes": "Shows detailed info, including rollout strategy and events."
+      },
+      {
+        "id": "r9",
+        "label": "List ReplicaSets in creation order",
+        "code": "kubectl get rs --sort-by=.metadata.creationTimestamp",
+        "notes": "Useful for debugging rollout sequence and history."
+      },
+      {
+        "id": "r10",
+        "label": "Watch pods during rollout",
+        "code": "kubectl get pods -l <label>=<value> -w",
+        "notes": "Streams live updates of pods matching a label."
+      },
+      {
+        "id": "r11",
+        "label": "Force a fresh rollout",
+        "code": "kubectl rollout restart deployment/<deployment-name>",
+        "notes": "Triggers a new rollout without modifying the manifest."
+      },
+      {
+        "id": "r12",
+        "label": "Annotate deployment with change cause",
+        "code": "kubectl annotate deployment/<deployment-name> kubernetes.io/change-cause=\"<reason>\"",
+        "notes": "Adds a human-readable reason for tracking in rollout history."
+      },
+      {
+        "id": "r13",
+        "label": "Set minimum ready seconds",
+        "code": "kubectl patch deployment <deployment-name> -p '{\"spec\": {\"minReadySeconds\": <seconds>}}'",
+        "notes": "Ensures pods are ready for a minimum time before marking them available."
+      },
+      {
+        "id": "r14",
+        "label": "Adjust rolling update speed",
+        "code": "kubectl patch deployment <deployment-name> -p '{\"spec\": {\"strategy\": {\"rollingUpdate\": {\"maxUnavailable\": <num>, \"maxSurge\": <num>}}}}'",
+        "notes": "Fine-tunes how many pods are replaced at a time."
+      },
+      {
+        "id": "r15",
+        "label": "View details of a specific revision",
+        "code": "kubectl rollout history deployment/<deployment-name> --revision=<revision>",
+        "notes": "Shows configuration details for a particular revision."
+      },
+      {
+        "id": "r16",
+        "label": "Preview changes before rollout",
+        "code": "kubectl diff -f <manifest.yaml>",
+        "notes": "Compares live configuration against a manifest before applying."
+      },
+      {
+        "id": "r17",
+        "label": "View recent rollout events",
+        "code": "kubectl get events --sort-by='.lastTimestamp'",
+        "notes": "Lists events in order of occurrence to debug rollout issues."
+      }
+    ]
+  }
+]
