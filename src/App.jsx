@@ -66,7 +66,7 @@ function Header({ query, setQuery, inputRef }) {
           <span style={{ color: THEME.text, fontSize: 28, fontWeight: 800, letterSpacing: '-1px', lineHeight: 1.1, fontFamily: 'Inter, system-ui, -apple-system, Roboto, Arial' }}>CLI Codex</span>
         </div>
         <a href="https://github.com/trahulprabhu38/cli-codex" target="_blank" rel="noopener noreferrer" style={{ position: 'absolute', right: 32, top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center' }}>
-          <img src="/public/download.png" alt="GitHub" style={{ height: 38, width: 38, display: 'block', borderRadius: '50%' }} />
+          <img src="/download.png" alt="GitHub" style={{ height: 38, width: 38, display: 'block', borderRadius: '50%' }} />
         </a>
       </div>
     </header>
